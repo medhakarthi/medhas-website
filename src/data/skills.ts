@@ -1,0 +1,26 @@
+export const techStack = {
+  Languages: [
+    "Python",
+    "Java",
+    "JavaScript",
+    "TypeScript",
+    "C",
+    "C++",
+    "SQL",
+    "HTML",
+    "CSS",
+    "Racket",
+  ],
+  "Frameworks and Libraries": [
+    "React",
+    "Next.js",
+    "Tailwind CSS",
+    "Flask",
+    "FastAPI",
+    "Node.js",
+    "Pygame",
+    "Tkinter",
+  ],
+  "Developer Tools": ["Git", "GitHub", "VS Code", "Figma", "Vercel"],
+  Databases: ["SQLite", "Firebase"],
+} as const;
