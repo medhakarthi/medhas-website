@@ -16,7 +16,7 @@ export const projects: Project[] = [
     name: "SkillSprout",
     description:
       "An AI-powered app that turns vague career goals into structured weekly roadmaps.",
-    technologies: ["TypeScript", "Next.js", "React", "ChatGPT API"],
+    technologies: ["OpenAI API", "TypeScript", "Next.js", "React", "HTML", "CSS"],
     github: "https://github.com/medhakarthi/SkillSprout",
     status: "Featured",
     featured: true,
@@ -26,7 +26,7 @@ export const projects: Project[] = [
     id: "books-for-kooks",
     name: "Books for Kooks",
     description: "A book discovery web application.",
-    technologies: ["Python", "Flask", "SQL", "SQLite", "HTML", "CSS"],
+    technologies: ["Python", "SQL", "HTML", "CSS", "Flask", "JavaScript", "PostgreSQL", "Supabase"],
     github: "https://github.com/medhakarthi/Books-For-Kooks",
     status: "Featured",
     featured: true,
