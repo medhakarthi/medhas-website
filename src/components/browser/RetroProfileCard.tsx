@@ -1,4 +1,5 @@
 import { siteConfig } from "@/data/site";
+import Image from "next/image";
 
 export function RetroProfileCard() {
   return (
@@ -24,8 +25,15 @@ export function RetroProfileCard() {
           ✦
         </span>
 
-        <div className="profile-avatar" aria-hidden="true">
-          M
+        <div className="profile-avatar">
+          <Image
+            src="/medha.png"
+            alt={siteConfig.name}
+            fill
+            sizes="180px"
+            priority
+            className="profile-avatar-img"
+          />
         </div>
         <h2 className="profile-name">{siteConfig.name}</h2>
         <p className="profile-role">CS @ Waterloo</p>

@@ -1,50 +1,22 @@
 import { RetroProfileCard } from "@/components/browser/RetroProfileCard";
 import { GitHubIcon, LinkedInIcon } from "@/components/ui/SocialIcons";
 import { siteConfig } from "@/data/site";
-import { Code2, FileText, Mail, Terminal } from "lucide-react";
 import type { ReactNode } from "react";
 
 const socialLinks: {
   label: string;
   href: string;
-  external: boolean;
   icon: ReactNode;
 }[] = [
   {
     label: "GitHub",
     href: siteConfig.github,
-    external: true,
     icon: <GitHubIcon size={13} />,
   },
   {
     label: "LinkedIn",
     href: siteConfig.linkedin,
-    external: true,
     icon: <LinkedInIcon size={13} />,
-  },
-  {
-    label: "Email",
-    href: `mailto:${siteConfig.email}`,
-    external: false,
-    icon: <Mail className="size-3.5" strokeWidth={2.25} aria-hidden="true" />,
-  },
-  {
-    label: "Resume",
-    href: siteConfig.resumeUrl,
-    external: true,
-    icon: <FileText className="size-3.5" strokeWidth={2.25} aria-hidden="true" />,
-  },
-  {
-    label: "Code",
-    href: siteConfig.github,
-    external: true,
-    icon: <Code2 className="size-3.5" strokeWidth={2.25} aria-hidden="true" />,
-  },
-  {
-    label: "Terminal",
-    href: siteConfig.github,
-    external: true,
-    icon: <Terminal className="size-3.5" strokeWidth={2.25} aria-hidden="true" />,
   },
 ];
 
@@ -62,8 +34,8 @@ export function AboutTab() {
             <a
               key={link.label}
               href={link.href}
-              target={link.external ? "_blank" : undefined}
-              rel={link.external ? "noopener noreferrer" : undefined}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={link.label}
               title={link.label}
               className="social-btn"

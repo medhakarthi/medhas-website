@@ -121,7 +121,7 @@ function Folder() {
       <svg width="14" height="12" viewBox="0 0 14 12" fill="currentColor" aria-hidden="true">
         <path d="M0 2h4l1.5 1.5H14V11H0V2Z" />
       </svg>
-      <span className="text-[7px]">projects(4)</span>
+      <span className="text-[7px]">projects(3)</span>
     </div>
   );
 }

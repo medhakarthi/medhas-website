@@ -12,18 +12,18 @@ export const experiences: Experience[] = [
   {
     id: "data-intern",
     role: "Data Intern",
-    company: "Company Name",
-    date: "May 2025 — Aug 2025",
-    location: "Remote / City, Country",
+    company: "MCAP",
+    date: "May 2026 — Sep 2026",
+    location: "Toronto, ON",
     description:
-      "Worked with datasets, built analysis pipelines, and helped turn insights into actionable product recommendations. Collaborated with engineers and analysts on clean, well-documented deliverables.",
-    technologies: ["Python", "SQL", "Pandas", "Excel"],
+      "Traced data lineages as older datasets were retired, wrote efficient SQL to keep data accurate, built Power BI dashboards, and refined the team’s website UI while working with data engineers and architects.",
+    technologies: ["SQL", "Power BI", "Excel"],
   },
   {
     id: "software-developer",
     role: "Software Developer",
-    company: "Organization Name",
-    date: "Jan 2025 — Apr 2025",
+    company: "Electrium Mobility",
+    date: "Nov 2025 — Apr 2026",
     location: "Waterloo, ON",
     description:
       "Built and shipped features across the stack, improved UI responsiveness, and collaborated in an agile team. Focused on reliable code, clear communication, and polished user experiences.",

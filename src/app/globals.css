@@ -508,20 +508,18 @@ body {
 
 .profile-avatar {
   position: relative;
-  display: flex;
-  width: 96px;
-  height: 96px;
-  align-items: center;
-  justify-content: center;
+  width: 180px;
+  height: 228px;
+  overflow: hidden;
   border: 2px solid var(--line);
   border-radius: 8px;
   background: var(--avatar);
   box-shadow: 2px 2px 0 rgba(74, 32, 48, 0.35);
-  font-family: var(--font-pixelify), monospace;
-  font-size: 48px;
-  font-weight: 700;
-  color: var(--pink-hot);
-  line-height: 1;
+}
+
+.profile-avatar-img {
+  object-fit: cover;
+  object-position: 86% 22%;
 }
 
 .profile-name {
