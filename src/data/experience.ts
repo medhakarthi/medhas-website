@@ -16,7 +16,7 @@ export const experiences: Experience[] = [
     date: "May 2026 — Sep 2026",
     location: "Toronto, ON",
     description:
-      "Traced data lineages as older datasets were retired, wrote efficient SQL to keep data accurate, built Power BI dashboards, and refined the team’s website UI while working with data engineers and architects.",
+      "Traced data lineages as older datasets were retired, wrote efficient SQL to keep data accurate, built Power BI dashboards, and refined the team’s website UI.",
     technologies: ["SQL", "Power BI", "Excel"],
   },
   {
