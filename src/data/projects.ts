@@ -46,7 +46,7 @@ export const projects: Project[] = [
   {
     id: "cartcaster",
     name: "CartCaster",
-    description: "Predicts purchase likelihood from browsing-session behavior.",
+    description: "An ML application that predicts purchase likelihood based on browsing-session behavior.",
     technologies: ["Python", "Pandas", "scikit-learn", "Matplotlib", "Streamlit"],
     github: "https://github.com/medhakarthi/CartCaster",
     status: "Featured",
