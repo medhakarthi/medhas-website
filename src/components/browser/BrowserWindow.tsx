@@ -10,13 +10,12 @@ import { SparkleCursor } from "@/components/browser/SparkleCursor";
 import { ToolsTab } from "@/components/browser/ToolsTab";
 import { type TabId } from "@/data/tabs";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useState } from "react";
 
 export function RetroBrowser() {
   const [activeTab, setActiveTab] = useState<TabId>("about");
   const [contentKey, setContentKey] = useState(0);
   const reduceMotion = useReducedMotion();
-  const browserRef = useRef<HTMLDivElement>(null);
 
   const handleTabChange = useCallback((tab: TabId) => {
     setActiveTab(tab);
@@ -29,9 +28,9 @@ export function RetroBrowser() {
   return (
     <div className="page-shell">
       <FloatingDecorations />
-      <SparkleCursor browserRef={browserRef} />
+      <SparkleCursor />
 
-      <div ref={browserRef} id="portfolio" className="browser-shell">
+      <div id="portfolio" className="browser-shell">
         <div className="browser-titlebar">
           <div className="win-dots" aria-hidden="true">
             <span className="win-dot" />

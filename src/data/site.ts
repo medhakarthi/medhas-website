@@ -14,7 +14,7 @@ export const siteConfig = {
   program: "Computer Science",
   about: {
     label: "HELLO, WORLD!",
-    heading: "Hi, I’m Medha 👋",
+    heading: "Hi, I’m Medha",
     subtitle: "Computer Science student at the University of Waterloo.",
     description: "Building Whatever My Mind Imagines",
     status: "open to learning & building",

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, useSyncExternalStore, type RefObject } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 
 type Sparkle = {
   id: number;
@@ -29,14 +29,11 @@ function useMq(query: string, fallback = false) {
   );
 }
 
-type Props = { browserRef: RefObject<HTMLElement | null> };
-
-export function SparkleCursor({ browserRef }: Props) {
+export function SparkleCursor() {
   const fine = useMq("(pointer: fine)");
   const reduce = useMq("(prefers-reduced-motion: reduce)");
   const enabled = fine && !reduce;
 
-  const [outside, setOutside] = useState(true);
   const [pos, setPos] = useState({ x: -40, y: -40 });
   const [sparkles, setSparkles] = useState<Sparkle[]>([]);
   const idRef = useRef(0);
@@ -46,17 +43,7 @@ export function SparkleCursor({ browserRef }: Props) {
     if (!enabled) return;
 
     const onMove = (e: MouseEvent) => {
-      const rect = browserRef.current?.getBoundingClientRect();
-      const over =
-        !!rect &&
-        e.clientX >= rect.left &&
-        e.clientX <= rect.right &&
-        e.clientY >= rect.top &&
-        e.clientY <= rect.bottom;
-
-      setOutside(!over);
       setPos({ x: e.clientX, y: e.clientY });
-      if (over) return;
 
       const t = performance.now();
       if (t - last.current < 38) return;
@@ -80,45 +67,43 @@ export function SparkleCursor({ browserRef }: Props) {
 
     window.addEventListener("mousemove", onMove, { passive: true });
     return () => window.removeEventListener("mousemove", onMove);
-  }, [browserRef, enabled]);
+  }, [enabled]);
 
   useEffect(() => {
     if (!enabled) {
       document.body.classList.remove("sparkle-cursor-area");
       return;
     }
-    document.body.classList.toggle("sparkle-cursor-area", outside);
+    document.body.classList.add("sparkle-cursor-area");
     return () => document.body.classList.remove("sparkle-cursor-area");
-  }, [enabled, outside]);
+  }, [enabled]);
 
   if (!enabled) return null;
 
   return (
     <div className="pointer-events-none fixed inset-0 z-[100]" aria-hidden="true">
-      {outside && (
-        <svg
-          width="20"
-          height="24"
-          viewBox="0 0 20 24"
-          className="absolute"
-          style={{
-            left: pos.x,
-            top: pos.y,
-            transform: "translate(-1px, -1px)",
-            imageRendering: "pixelated",
-            filter: "drop-shadow(0 0 3px rgba(255,143,181,0.7))",
-          }}
-        >
-          {/* chunky pixel arrow */}
-          <path
-            d="M2 1h2v2h2v2h2v2h2v2h2v2h2v2h-4v2h2v2h-2v2h-2v-2H8v-2H6v2H4v-4h2v-2H4V9H2V1z"
-            fill="#ffb0c8"
-            stroke="#4a2030"
-            strokeWidth="1"
-          />
-          <path d="M4 3h2v2H4zm2 2h2v2H6zm2 2h2v2H8zm2 2h2v2h-2z" fill="#ffe0ea" />
-        </svg>
-      )}
+      <svg
+        width="20"
+        height="24"
+        viewBox="0 0 20 24"
+        className="absolute"
+        style={{
+          left: pos.x,
+          top: pos.y,
+          transform: "translate(-1px, -1px)",
+          imageRendering: "pixelated",
+          filter: "drop-shadow(0 0 3px rgba(255,143,181,0.7))",
+        }}
+      >
+        {/* chunky pixel arrow */}
+        <path
+          d="M2 1h2v2h2v2h2v2h2v2h2v2h2v2h-4v2h2v2h-2v2h-2v-2H8v-2H6v2H4v-4h2v-2H4V9H2V1z"
+          fill="#ffb0c8"
+          stroke="#4a2030"
+          strokeWidth="1"
+        />
+        <path d="M4 3h2v2H4zm2 2h2v2H6zm2 2h2v2H8zm2 2h2v2h-2z" fill="#ffe0ea" />
+      </svg>
       {sparkles.map((s) => (
         <span
           key={s.id}

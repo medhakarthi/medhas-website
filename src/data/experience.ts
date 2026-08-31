@@ -16,7 +16,7 @@ export const experiences: Experience[] = [
     date: "May 2026 — Sep 2026",
     location: "Toronto, ON",
     description:
-      "Traced data lineages as older datasets were retired, wrote efficient SQL to keep data accurate, maintained Power BI dashboards, and refined the team’s website UI.",
+      "Worked on data quality, SQL analysis, ETL workflows, and data lineage to make enterprise data easier to monitor, trace, and use.",
     technologies: ["SQL", "Power BI", "Excel"],
   },
   {
@@ -26,7 +26,7 @@ export const experiences: Experience[] = [
     date: "Nov 2025 — Apr 2026",
     location: "Waterloo, ON",
     description:
-      "Built and shipped features across the stack, improved UI responsiveness, and collaborated in an agile team. Focused on reliable code, clear communication, and polished user experiences.",
-    technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
+      "Built and improved an internal request-tracking platform using React, TypeScript, Supabase, and PostgreSQL to help engineering teams manage work more efficiently.",
+    technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS", "PostgreSQL", "Supabase"],
   },
 ];

@@ -27,11 +27,12 @@ export function RetroProfileCard() {
 
         <div className="profile-avatar">
           <Image
-            src="/medha.png"
+            src="/medha-pixel.png"
             alt={siteConfig.name}
             fill
             sizes="180px"
             priority
+            unoptimized
             className="profile-avatar-img"
           />
         </div>

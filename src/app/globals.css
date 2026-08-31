@@ -387,12 +387,46 @@ body {
 }
 
 .about-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.22em;
   margin: 0;
   font-family: var(--font-pixelify), monospace;
   font-size: clamp(1.7rem, 3.2vw, 2.55rem);
   line-height: 1.15;
   font-weight: 700;
   color: var(--text);
+}
+
+.pixel-wave {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 1.55em;
+  height: 1.7em;
+  object-fit: contain;
+  overflow: visible;
+  image-rendering: pixelated;
+  transform-origin: 72% 88%;
+  animation: pixel-wave 1s steps(4) infinite;
+}
+
+@keyframes pixel-wave {
+  0% {
+    transform: rotate(-16deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-16deg);
+  }
 }
 
 .about-subtitle {
@@ -519,7 +553,8 @@ body {
 
 .profile-avatar-img {
   object-fit: cover;
-  object-position: 86% 22%;
+  object-position: 62% 58%;
+  image-rendering: pixelated;
 }
 
 .profile-name {
@@ -685,7 +720,8 @@ body {
   .drift-b,
   .drift-c,
   .twinkle,
-  .pixel-sparkle {
+  .pixel-sparkle,
+  .pixel-wave {
     animation: none !important;
   }
 
@@ -694,17 +730,8 @@ body {
   }
 }
 
-/* cursor outside browser */
-.sparkle-cursor-area {
-  cursor: none;
-}
-
-.sparkle-cursor-area .browser-shell,
-.sparkle-cursor-area .browser-shell * {
-  cursor: auto;
-}
-
-.sparkle-cursor-area .browser-shell button,
-.sparkle-cursor-area .browser-shell a {
-  cursor: pointer;
+/* custom pink cursor everywhere */
+.sparkle-cursor-area,
+.sparkle-cursor-area * {
+  cursor: none !important;
 }
