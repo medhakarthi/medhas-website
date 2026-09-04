@@ -18,7 +18,7 @@ export function ProjectsTab() {
                 {project.id}.proj
               </span>
               {project.status && (
-                <span className="shrink-0 border border-line bg-panel px-1.5 py-px font-mono text-[9px]">
+                <span className="shrink-0 border border-line bg-panel px-1.5 py-px font-mono text-[9px] text-text">
                   {project.status}
                 </span>
               )}
