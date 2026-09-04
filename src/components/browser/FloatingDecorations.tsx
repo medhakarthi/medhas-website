@@ -131,7 +131,7 @@ export function FloatingDecorations() {
     <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
       {items.map((item, i) => {
         const hide = item.mobile === false ? "hidden md:block" : "";
-        const base = `absolute select-none font-pixel text-pink-bright/35 ${item.className} ${hide}`;
+        const base = `absolute select-none font-pixel text-accent-bright/35 ${item.className} ${hide}`;
 
         if (item.type === "star") {
           return (
@@ -149,14 +149,14 @@ export function FloatingDecorations() {
         }
         if (item.type === "grid") {
           return (
-            <span key={i} className={`${base} text-pink/30`}>
+            <span key={i} className={`${base} text-accent/30`}>
               <Grid />
             </span>
           );
         }
         if (item.type === "folder") {
           return (
-            <span key={i} className={`${base} text-pink/40`}>
+            <span key={i} className={`${base} text-accent/40`}>
               <Folder />
             </span>
           );

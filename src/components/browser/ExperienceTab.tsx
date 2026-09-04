@@ -11,7 +11,7 @@ export function ExperienceTab() {
         {experiences.map((item) => (
           <li key={item.id} className="relative">
             <span
-              className="absolute top-2 -left-[1.35rem] size-2.5 border-2 border-line bg-pink-hot"
+              className="absolute top-2 -left-[1.35rem] size-2.5 border-2 border-line bg-accent-hot"
               aria-hidden="true"
             />
             <article className="retro-card">
@@ -21,7 +21,7 @@ export function ExperienceTab() {
               </div>
               <div className="p-3">
                 <h3 className="font-pixel text-base text-text">{item.role}</h3>
-                <p className="mt-0.5 font-mono text-[11px] text-pink-hot">
+                <p className="mt-0.5 font-mono text-[11px] text-accent-hot">
                   {item.company}
                   <span className="text-text-muted"> · {item.location}</span>
                 </p>

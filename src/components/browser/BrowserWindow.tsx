@@ -6,7 +6,7 @@ import { BrowserToolbar } from "@/components/browser/BrowserToolbar";
 import { ExperienceTab } from "@/components/browser/ExperienceTab";
 import { FloatingDecorations } from "@/components/browser/FloatingDecorations";
 import { ProjectsTab } from "@/components/browser/ProjectsTab";
-import { SparkleCursor } from "@/components/browser/SparkleCursor";
+import { RetroCursor } from "@/components/browser/RetroCursor";
 import { ToolsTab } from "@/components/browser/ToolsTab";
 import { type TabId } from "@/data/tabs";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
@@ -28,7 +28,7 @@ export function RetroBrowser() {
   return (
     <div className="page-shell">
       <FloatingDecorations />
-      <SparkleCursor />
+      <RetroCursor />
 
       <div id="portfolio" className="browser-shell">
         <div className="browser-titlebar">

@@ -70,7 +70,7 @@ export default function RootLayout({
       <body className="min-h-full bg-bg font-mono text-text antialiased">
         <a
           href="#portfolio"
-          className="sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[120] focus:m-0 focus:inline-flex focus:h-auto focus:w-auto focus:items-center focus:border-2 focus:border-line focus:bg-chrome focus:px-3 focus:py-2 focus:font-pixel focus:text-xs focus:text-text focus:[clip:auto]"
+          className="sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[120] focus:m-0 focus:inline-flex focus:h-auto focus:w-auto focus:items-center focus:border-2 focus:border-line focus:bg-chrome focus:px-3 focus:py-2 focus:font-pixel focus:text-xs focus:text-chrome-text focus:[clip:auto]"
         >
           Skip to content
         </a>

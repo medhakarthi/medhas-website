@@ -41,7 +41,7 @@ export function ProjectsTab() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${project.name} on GitHub`}
-                  className="inline-flex items-center gap-1 font-mono text-[11px] text-text-muted hover:text-pink-hot"
+                  className="inline-flex items-center gap-1 font-mono text-[11px] text-text-muted hover:text-accent-hot"
                 >
                   <GitHubIcon size={12} />
                   GitHub
@@ -52,7 +52,7 @@ export function ProjectsTab() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${project.name} live demo`}
-                    className="inline-flex items-center gap-1 font-mono text-[11px] text-text-muted hover:text-pink-hot"
+                    className="inline-flex items-center gap-1 font-mono text-[11px] text-text-muted hover:text-accent-hot"
                   >
                     <ExternalLink className="size-3" strokeWidth={2.5} aria-hidden="true" />
                     Live
