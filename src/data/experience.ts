@@ -13,7 +13,7 @@ export const experiences: Experience[] = [
     id: "data-intern",
     role: "Data Intern",
     company: "MCAP",
-    date: "May 2026 — Sep 2026",
+    date: "May 2026 — August 2026",
     location: "Toronto, ON",
     description:
       "Worked on data quality, SQL analysis, ETL workflows, and data lineage to make enterprise data easier to monitor, trace, and use.",
