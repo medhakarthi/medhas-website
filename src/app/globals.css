@@ -404,8 +404,8 @@ body {
 .pixel-wave {
   display: inline-block;
   flex-shrink: 0;
-  width: 1.55em;
-  height: 1.7em;
+  width: 1em;
+  height: 1.1em;
   object-fit: contain;
   overflow: visible;
   image-rendering: pixelated;
